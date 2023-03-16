@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $CFILE|grep "include*">c
+cpp -E $CFILE >c
