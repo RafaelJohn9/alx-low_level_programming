@@ -1,9 +1,13 @@
 #include <stdio.h>
+/**
+ * main -'simple puts program
+ *
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-	/*
-	 * *simple puts program
-	 */
-	puts("\"Programming is like building a multilingual puzzle\n");
+
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
