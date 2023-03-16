@@ -1,2 +1,2 @@
 #!/bin/bash
-cpp -S $CFILE>"$CFILE.o"
+cpp -S $CFILE>main.o
