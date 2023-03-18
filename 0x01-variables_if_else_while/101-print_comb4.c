@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main-The success combination in business is : Do what you do better ... and :do more of what you do
+ * main-The success combination in business is :
  * Return:always 0
  */
 int main(void)
