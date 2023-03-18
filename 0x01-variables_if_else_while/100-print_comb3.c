@@ -24,8 +24,15 @@ int main(void)
 			{
 				putchar(i + '0');
 				putchar(d + '0');
-				putchar(',');
-				putchar(' ');
+				if (i == 8 && d == 9)
+				{
+					continue;
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
