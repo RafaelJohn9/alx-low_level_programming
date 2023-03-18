@@ -12,10 +12,21 @@ int main(void)
 	{
 		for (d = 1; d < 10; d++)
 		{
-			putchar(i + '0');
-			putchar(d + '0');
-			putchar(',');
-			putchar(' ');
+			if (i == d)
+			{
+				continue;
+			}
+			else if (d < i)
+			{
+				continue;
+			}
+			else
+			{
+				putchar(i + '0');
+				putchar(d + '0');
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
