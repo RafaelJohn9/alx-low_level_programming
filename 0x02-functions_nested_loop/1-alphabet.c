@@ -1,21 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * print_alphabet-prints all alphabet in lower case
- * Return:void
+ * print_alphabet-all lowercase letters
  */
 
 void print_alphabet(void)
 {
-	printf("abcdefghijklmnopqrstuvwxyz\n");
-}
+	int i;
 
-/**
- * main-check the code
- * Return: Always 0
- */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	for (i = 97; i < 123; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
