@@ -12,12 +12,12 @@ int main(void)
 	double c;
 
 	printf("1, 2, %.0f, ", sum);
-	while (limiter < 97)
+	while (limiter < 95)
 	{
 		c = sum;
 		sum = c + b;
 		b = c;
-		if (limiter < 96)
+		if (limiter < 94)
 		{
 			printf("%.0f, ", sum);
 		}
