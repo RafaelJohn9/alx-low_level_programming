@@ -11,7 +11,7 @@ int main(void)
 	unsigned long long sum = a + b;
 	unsigned long long c;
 
-	printf("1, 2, %llu, ", sum);
+	printf("1, 2, %lu, ", sum);
 	while (limiter < 97)
 	{
 		c = sum;
