@@ -17,7 +17,7 @@ int main(void)
 		sum = c;
 		sum = c + b;
 		b = c;
-	
+
 		if (limiter < 94)
 		{
 			printf("%.0f, ", sum);
