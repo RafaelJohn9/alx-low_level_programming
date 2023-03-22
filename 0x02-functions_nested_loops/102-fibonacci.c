@@ -18,7 +18,7 @@ int main(void)
 		c = sum;
 		sum = c + b;
 		b = c;
-		if (limiter < 50)
+		if (limiter < 49)
 		{
 			printf("%ld, ", sum);
 		}
