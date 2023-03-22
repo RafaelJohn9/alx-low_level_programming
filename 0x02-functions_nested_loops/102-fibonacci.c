@@ -28,6 +28,6 @@ int main(void)
 		}
 		limiter++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
