@@ -14,7 +14,7 @@ void times_table(void)
 
 			if (num2 == 0)
 			{
-				_putcar('0' + total);
+				_putchar('0' + total);
 			}
 			if (total < 10)
 			{
