@@ -11,7 +11,7 @@ int main(void)
 	long int sum = a + b;
 	long int c;
 
-	printf("1, 2\n");
+	printf("1, 2, ");
 	printf("%ld, ", sum);
 	while (limiter < 49)
 	{
