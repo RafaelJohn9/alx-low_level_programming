@@ -11,7 +11,7 @@ int main(void)
 	double sum = a + b;
 	double c;
 
-	printf("1, 2, %g, ", sum);
+	printf("1, 2, %.0f, ", sum);
 	while (limiter < 97)
 	{
 		c = sum;
@@ -19,11 +19,11 @@ int main(void)
 		b = c;
 		if (limiter < 96)
 		{
-			printf("%g, ", sum);
+			printf("%.0f, ", sum);
 		}
 		else
 		{
-			printf("%g", sum);
+			printf("%.0f", sum);
 		}
 		limiter++;
 	}
