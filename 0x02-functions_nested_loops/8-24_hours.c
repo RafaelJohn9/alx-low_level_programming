@@ -16,16 +16,15 @@ void jack_bauer(void)
 				minute_2 = minutes % 10;
 				if (hours < 10 && minutes < 10)
 				{
-					_putchar('0');
-					_putchar(hours + '0');
+					_putchar('0' + hour_1);
+					_putchar(hour_2 + '0');
 					_putchar(':');
-					_putchar('0');
-					_putchar(minutes + '0');
+					_putchar('0'+ minute_1);
+					_putchar(minute_2 + '0');
 					_putchar('\n');
 				}
 				else if (hours < 10 || minutes < 10)
 				{
-					_putchar('0');
 					_putchar(hour_1 + '0');
 					_putchar(hour_2 + '0');
 					_putchar(':');
