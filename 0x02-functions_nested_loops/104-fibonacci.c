@@ -12,12 +12,12 @@ int main(void)
 	unsigned long long c;
 
 	printf("1, 2, %llu, ", sum);
-	while (limiter < 98)
+	while (limiter < 97)
 	{
 		c = sum;
 		sum = c + b;
 		b = c;
-		if (limiter < 97)
+		if (limiter < 96)
 		{
 			printf("%llu, ", sum);
 		}
