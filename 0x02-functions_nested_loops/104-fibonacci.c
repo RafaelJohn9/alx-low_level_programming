@@ -14,9 +14,10 @@ int main(void)
 	printf("1, 2, %.0f, ", sum);
 	while (limiter < 95)
 	{
-		c = sum;
+		c = b;
+		b = sum
 		sum = c + b;
-		b = c;
+	
 		if (limiter < 94)
 		{
 			printf("%.0f, ", sum);
