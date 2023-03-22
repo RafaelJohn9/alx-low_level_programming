@@ -15,13 +15,13 @@ int main(void)
 	{
 		c = next;
 		next = c + b;
-                b = c;
+		b = c;
+
 		if (next % 2 == 0)
 		{
 			sum = next + sum;
 		}
 	}
-	printf("%ld\n",sum);
+	printf("%ld\n", sum);
 	return (0);
 }
-
