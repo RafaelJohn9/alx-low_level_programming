@@ -19,7 +19,8 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar('0' + total);
+				_putchar('0' + total / 10);
+				_putchar('0' + total % 10);
 			}
 			if (num2 == 9)
 			{
