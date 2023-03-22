@@ -7,9 +7,14 @@ void print_to_98(int num)
 {
 	int a;
 
-	for (a = num; a <= 98 || a >= 98; a++)
+	for (a = num; a <= 98; a++)
 	{
+		for (a = num; a >= 98; a--)
+		{
+			printf("%d", a);
+		}
 		printf("%d", a);
+
 		if (a < 98)
 		{
 			putchar(',');
