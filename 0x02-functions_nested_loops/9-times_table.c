@@ -12,11 +12,11 @@ void times_table(void)
 		{
 			int total = num1 * num2;
 
-			if (num2 == 0)
+			if (num2 == 0 || num1 == 0)
 			{
 				_putchar('0' + total);
 			}
-			if (total < 10)
+			else if (total < 10)
 			{
 				_putchar(' ');
 				_putchar('0' + total);
