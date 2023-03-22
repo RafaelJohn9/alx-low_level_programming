@@ -14,16 +14,16 @@ void print_times_table(int n)
 		{
 			total = limiter_1 * limiter_2;
 			_putchar('0' + total);
-
-			if (limiter_2 == n)
-			{
-				continue;
-			}
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
+
+		if (limiter_2 == n)
+		{
+			continue;
+		}
+		else
+		{
+			_putchar(',');
+			_putchar(' ');
+		}	
 	}
 }
