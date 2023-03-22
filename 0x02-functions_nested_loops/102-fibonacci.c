@@ -28,5 +28,6 @@ int main(void)
 		}
 		limiter++;
 	}
+	putchar("\n");
 	return (0);
 }
