@@ -6,7 +6,7 @@
  */
 void print_times_table(int n)
 {
-	int limiter_1, limiter_2;
+	int limiter_1, limiter_2, total;
 
 	for (limiter_1 = 0; limiter_1 <= n; limiter_1++)
 	{
