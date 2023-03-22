@@ -12,6 +12,10 @@ void times_table(void)
 		{
 			int total = num1 * num2;
 
+			if (num2 == 0)
+			{
+				_putcar('0' + total);
+			}
 			if (total < 10)
 			{
 				_putchar(' ');
