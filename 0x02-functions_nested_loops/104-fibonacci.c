@@ -5,13 +5,13 @@
  */
 int main(void)
 {
-	unsigned long long limiter = 0;
-	unsigned long long a = 1;
-	unsigned long long b = 2;
-	unsigned long long sum = a + b;
-	unsigned long long c;
+	double limiter = 0;
+	double a = 1;
+	double b = 2;
+	double sum = a + b;
+	double c;
 
-	printf("1, 2, %lu, ", sum);
+	printf("1, 2, %g, ", sum);
 	while (limiter < 97)
 	{
 		c = sum;
@@ -19,11 +19,11 @@ int main(void)
 		b = c;
 		if (limiter < 96)
 		{
-			printf("%llu, ", sum);
+			printf("%g, ", sum);
 		}
 		else
 		{
-			printf("%llu", sum);
+			printf("%g", sum);
 		}
 		limiter++;
 	}
