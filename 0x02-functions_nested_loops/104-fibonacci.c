@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	long long unsigned limiter = 0;
-	long long unsigned a = 1;
-	long long unsigned b = 2;
-	long long unsigned sum = a + b;
-	long long unsigned c;
+	unsigned long long limiter = 0;
+	unsigned long long a = 1;
+	unsigned long long b = 2;
+	unsigned long long sum = a + b;
+	unsigned long long c;
 
 	printf("1, 2, %llu, ", sum);
 	while (limiter < 98)
