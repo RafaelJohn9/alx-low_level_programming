@@ -5,7 +5,6 @@
  */
 int main(void)
 {
-	long int limiter = 0;
 	long int a = 1;
 	long int b = 2;
 	long int next = a + b;
