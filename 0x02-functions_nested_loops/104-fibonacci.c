@@ -15,7 +15,7 @@ int main(void)
 	while (limiter < 95)
 	{
 		c = b;
-		b = sum
+		b = sum;
 		sum = c + b;
 	
 		if (limiter < 94)
