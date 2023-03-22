@@ -13,7 +13,7 @@ int main(void)
 
 	printf("1, 2\n");
 	printf("%ld, ", sum);
-	while (limiter < 50)
+	while (limiter < 49)
 	{
 		c = sum;
 		sum = c + b;
