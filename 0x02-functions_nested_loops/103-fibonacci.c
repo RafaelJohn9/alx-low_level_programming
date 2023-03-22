@@ -12,12 +12,12 @@ int main(void)
 	long int c;
 	long int sum = b;
 
-	while (b < 4000000)
+	while (next < 4000000)
 	{
 		c = next;
 		next = c + b;
                 b = c;
-		if (next % 2 == 0);
+		if (next % 2 == 0)
 		{
 			sum = next + sum;
 		}
