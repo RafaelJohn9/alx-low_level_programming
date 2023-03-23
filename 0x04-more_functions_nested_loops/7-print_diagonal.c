@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_diagonal-prints a diagonal diagonally 
+ * print_diagonal-prints a diagonal diagonally
  * @n:limiter
  */
 void print_diagonal(int n)
 {
 	int num, a;
-	
+
 	if (n <= 0)
 	{
 		_putchar('\n');
@@ -19,7 +19,7 @@ void print_diagonal(int n)
 		{
 			for (a = 0; a <= num; a++)
 			{
-				if ( a == num)
+				if (a == num)
 				{
 					_putchar('\\');
 				}

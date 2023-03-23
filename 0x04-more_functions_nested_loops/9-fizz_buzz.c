@@ -12,19 +12,30 @@ int main(void)
 	{
 		if (num % 3 == 0 && num % 5 == 0)
 		{
-			printf("fizzbuzz");
+			printf("FizzBuzz");
+			putchar(' ');
 		}
 		else if (num % 3 == 0)
 		{
-			printf("fizz");
+			printf("Fizz");
+			putchar(' ');
 		}
 		else if (num % 5 == 0)
 		{
-			printf("buzz");
+			printf("Buzz");
+			if (num == 100)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(' ');
+			}
 		}
 		else
 		{
-			printf("%d", num)
+			printf("%d", num);
+			putchar(' ');
 		}
 	}
 }
