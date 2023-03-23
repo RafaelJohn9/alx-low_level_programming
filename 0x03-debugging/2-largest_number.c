@@ -4,12 +4,12 @@
 /**
  * largest_number- returns the largest number of 3 numbers
  * @a:first integer
- * @b second integer
+ * @b:second integer
  * @c: third integer
- * Return: larhest number
+ * Return: largest number
  */
 
-int latgest_number(int a, int b, int c)
+int largest_number(int a, int b, int c)
 {
 	int largest;
 
@@ -21,7 +21,7 @@ int latgest_number(int a, int b, int c)
 	{
 		largest = b;
 	}
-	else 
+	else
 	{
 		largest = c;
 	}
