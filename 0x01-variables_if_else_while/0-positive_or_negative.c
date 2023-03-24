@@ -2,7 +2,6 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-/* betty style doc for function main goes there */
 /**
  * main -this is a simple random integer generator
  * Return:always 0

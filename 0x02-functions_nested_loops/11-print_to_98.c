@@ -1,24 +1,42 @@
 #include <stdio.h>
 /**
  * print_to_98-prints to 98
- * @num:input to start at
+ * @n:input to start at
  */
-void print_to_98(int num)
+void print_to_98(int n)
 {
-	int a;
+	int a = n;
 
-	for (a = num; a <= 98; a++)
+	if (n < 98)
 	{
-		for (a = num; a >= 98; a--)
+		for (a = n; a <= 98 ; a++)
 		{
 			printf("%d", a);
-		}
-		printf("%d", a);
 
-		if (a < 98)
+			if (a < 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+
+	}
+	else if (n > 98)
+	{
+		for (a = n; a >= 98; a--)
 		{
-			putchar(',');
-			putchar(' ');
+			printf("%d", a);
+
+			if (a > 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
+	else
+	{
+		printf("%d", a);
+	}
+	printf("\n");
 }
