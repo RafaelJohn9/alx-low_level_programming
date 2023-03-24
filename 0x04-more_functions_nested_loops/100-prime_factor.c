@@ -17,6 +17,6 @@ int main(void)
 			number = number / a;
 		}
 	}
-	printf("%d", prime);
+	printf("%d\n", prime);
 	return (0);
 }
