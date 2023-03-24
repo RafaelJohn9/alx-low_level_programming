@@ -11,7 +11,7 @@ int main(void)
 
 	for (a = 2;a <= number; a++)
 	{
-		while (a % number == 0)
+		while (number % a == 0)
 		{
 			prime = a;
 			number = number / a;
