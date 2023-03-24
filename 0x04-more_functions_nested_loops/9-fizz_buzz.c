@@ -27,10 +27,7 @@ int main(void)
 			{
 				putchar('\n');
 			}
-			else
-			{
-				putchar(' ');
-			}
+			
 		}
 		else
 		{
