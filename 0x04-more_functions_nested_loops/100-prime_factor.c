@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	long long int number = 612852475143;
+	long int number = 612852475143;
 	int a, prime;
 
-	for (a = 2;a <= number; a++)
+	for (a = 2; a <= number; a++)
 	{
 		while (number % a == 0)
 		{
