@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * print_rev-prints reverse
+ * rev_string-prints reverse
  * @s:value to be manipulated
  */
 void rev_string(char *s)
@@ -17,12 +17,11 @@ void rev_string(char *s)
 		return;
 	}
 
-	for (len = len -1; len >= 0; len--)
+	for (len = len - 1; len >= 0; len--)
 	{
 		string[i] = s[len];
 		i++;
 	}
-	
 	string[i] = '\0';
 	strcpy(s, string);
 	free(string);
