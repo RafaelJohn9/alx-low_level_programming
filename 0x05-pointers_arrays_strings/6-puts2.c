@@ -18,6 +18,7 @@ void puts2(char *str)
 		}
 		else
 		{
+			limiter++;
 			continue;
 		}
 	}
