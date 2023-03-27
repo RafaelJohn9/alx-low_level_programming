@@ -13,7 +13,7 @@ void puts2(char *str)
 	{
 		if (limiter % 2 == 0 || limiter == 0)
 		{
-			_putchar(s[len]);
+			_putchar(str[limiter]);
 			limiter++;
 		}
 	}
