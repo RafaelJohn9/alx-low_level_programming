@@ -10,13 +10,22 @@ void puts_half(char *str)
 	int len = strlen(str);
 
 	int half_len = len / 2;
+	int n = ++half_len
 
 	while (len >= 0)
 	{
 
-		if (len > half_len && len % 2 == 0)
+		if (len > half_len)
 		{
-			_putchar(str[half_len]);
+			if (len % 2 == 0)
+			{
+				_putchar(str[half_len]);
+			}
+			else
+			{
+				_putchar(str[n]);
+			}
+				
 		}
 		else
 		{
@@ -24,6 +33,7 @@ void puts_half(char *str)
 		}
 		len--;
 		half_len++;
+		n++;
 
 	}
 	_putchar('\n');
