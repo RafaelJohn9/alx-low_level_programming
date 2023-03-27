@@ -22,13 +22,9 @@ void puts_half(char *str)
 	}
 
 	n = half_len + 1;
-
-	while (len >= 0)
+	
+	for (n = half_len ; n < len_2; n++)
 	{
-		for (n = half_len + 1; n < len_2; n++)
-		{
-			_putchar(str[n]);
-		}
-		len--;
+		_putchar(str[n]);
 	}
 }
