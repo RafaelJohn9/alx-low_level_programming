@@ -19,14 +19,6 @@ void puts_half(char *str)
 		{
 			_putchar(str[half_len]);
 		}
-		else if (len > half_len && len % 2 != 0)
-		{
-			if (len > n)
-			{
-				_putchar(str[n]);
-				n++;
-			}
-		}
 		else
 		{
 			continue;
