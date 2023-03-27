@@ -11,10 +11,11 @@ char *_strcpy(char *dest, char *src)
 {
 	int limiter;
 
-	while (limiter != '\0')
+	while (src[limiter] != '\0')
 	{
 		dest[limiter] = src[limiter];
-		limiter++
+		limiter++;
 	}
+	dest[limiter] = '\0';
 	return (dest);
 }
