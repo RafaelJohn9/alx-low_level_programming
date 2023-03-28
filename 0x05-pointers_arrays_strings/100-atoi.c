@@ -11,8 +11,8 @@ int _atoi(char *s)
 
 	while (s != 0)
 	{
-		num = s % 10;
-		s = s / 10;
+		num =(int) s % 10;
+		s = (int)s / 10;
 		return (num);
 	}
 }
