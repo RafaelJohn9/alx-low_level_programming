@@ -7,12 +7,34 @@
  */
 int _atoi(char *s)
 {
-	int num;
+	int num = 0;
+	int a = 0;
+	char b[];
 
-	while (s != 0)
+	while (s[num] != '\0')
 	{
-		num =(int) s % 10;
-		s = (int)s / 10;
-		return (num);
+		if (s[num] == '-')
+		{
+			*(b + a) = s[num];
+			return (b);
+		}
+		else if (s(num) == '+')
+		{
+			*(b + a ) = s[num];
+			return (b);
+		}
+		else if (s[num] >= 48 && s[num] <= 57)
+		{
+			*(b + a) = s[num];
+			return (b);
+		}
+		else
+		{
+			continue;
+		}
+		a++;
+		num++;
 	}
+	*(b + ++a) = '\0';
+	return (0);
 }
