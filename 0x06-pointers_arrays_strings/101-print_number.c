@@ -1,15 +1,27 @@
 #include "main.h"
 
 /**
- * print_numbers-print numbers from 0 to 9
+ * print_number-prints number
+ * @n:number
  */
-void print_numbers(void)
+void print_number(int n)
 {
 	int num;
+	int divisor = 1;
 
-	for (num = 0; num < 10; num++)
+
+	if (n < 0)
 	{
-		_putchar(num + '0');
+		n = -n;
+		_putchar('-');
 	}
-	_putchar('\n');
+	while ((n / divisor) > 9)
+	{
+		divisor *= 10;
+	}
+	while (divisor != 0)
+	{
+		_putchar((n / divisor) % 10 + '0');
+		divisor /= 10
+	}
 }
