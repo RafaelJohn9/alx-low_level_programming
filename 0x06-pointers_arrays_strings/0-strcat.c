@@ -26,13 +26,13 @@ char *_strcat(char *dest, char *src)
 	}
 
 	sum_length = (len + len_2);
-	dest[len_2] = ' ';
+	dest[len_2] = '\0';
 
-	for (i = (len_2 + 1); i < sum_length; i++)
+	for (i = (len_2); i < sum_length; i++)
 	{
 		dest[i] = src[n];
 		n++;
 	}
-	dest[i] = '\n';
+	dest[i] = '\0';
 	return (dest);
 }
