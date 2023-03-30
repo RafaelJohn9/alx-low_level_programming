@@ -30,13 +30,11 @@ char *_strncat(char *dest, char *src, int n)
 		n = len;
 	}
 	sum_length = (len + (n - 1));
-	dest[len_2] = ' ';
 	for (i = (len_2 + 1); i < sum_length; i++)
 	{
 		dest[i] = src[a];
 		a++;
 	}
-	dest[i] = '\n';
-	dest[i + 1] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
