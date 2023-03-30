@@ -13,7 +13,7 @@ char *rot13(char *str)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if ((str[i] >= 'a' && str[i] < 'n') || str[i] >= 'A' && str[i] < 'N')
+			if ((str[i] >= 'a' && str[i] < 'n') || (str[i] >= 'A' && str[i] < 'N'))
 			{
 				result[i]++;
 			}
