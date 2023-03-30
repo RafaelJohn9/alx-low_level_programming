@@ -6,47 +6,22 @@
  */
 char *rot13(char *str)
 {
-	int limiter;
-	int len_str = 0;
-	int n;
-	
-	while (str[len_str] != '\0')
-	{
-		len_str++;
-	}
+	char *result = str;
+	int i, j;
 
-	for (limiter = 0; limiter < len_str; limiter++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[limiter] >= 'a' && str[limiter] <= 'z')
+		for (j = 0; j < 13; j++)
 		{
-			if (str[limiter] > 'm')
+			if ((str[i] >= 'a' && str[i] < 'n') || str[i] >= 'A' && str[i] < 'N'))
 			{
-				n = 13 + str[limiter];
-				n = n - 26;
-				str[limiter] = 'a' + (n);
+				result[i]++;
 			}
-			else
+			else if ((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] <= 'Z'))
 			{
-				str[limiter] = str[limiter] + 13;
+				result[i]--;
 			}
-		}
-		else if (str[limiter] >= 'A' && str[limiter] <= 'Z')
-		{
-			if (str[limiter] > 'M')
-			{
-				n = 13 + str[limiter];
-				n = n - 26;
-				str[limiter] = 'a' + n;
-			}
-			else
-			{
-				str[limiter] = str[limiter] + 13;
-			}
-		}
-		else
-		{
-			continue;
 		}
 	}
-	return (str);
+	return (result);
 }
