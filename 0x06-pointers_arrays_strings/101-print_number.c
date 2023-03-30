@@ -24,4 +24,8 @@ void print_number(int n)
 		_putchar((n / divisor) % 10 + '0');
 		divisor /= 10;
 	}
+	if (n == 0)
+	{
+		_putchar('0');
+	}
 }
