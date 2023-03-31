@@ -6,7 +6,6 @@
  */
 void print_number(int n)
 {
-	int num;
 	int divisor = 1;
 
 

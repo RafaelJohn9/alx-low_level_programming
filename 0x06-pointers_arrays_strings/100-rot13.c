@@ -7,7 +7,7 @@
 char *rot13(char *str)
 {
 	char *result = str;
-	int i, j;
+	int i;
 	char is_upper;
 
 	for (i = 0; str[i] != '\0'; i++)
