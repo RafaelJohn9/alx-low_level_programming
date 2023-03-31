@@ -6,7 +6,7 @@
  */
 char *rot13(char *str)
 {
-       	int i, j;
+	int i, j;
 	char *result = str;
 	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
@@ -22,5 +22,5 @@ char *rot13(char *str)
 			}
 		}
 	}
-	return result;
+	return (result);
 }
