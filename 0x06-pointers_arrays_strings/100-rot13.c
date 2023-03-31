@@ -12,7 +12,7 @@ char *rot13(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		is_upper = (str[i] >= 'A' && str[i] <+ 'Z');
+		is_upper = (str[i] >= 'A' && str[i] <= 'Z');
 		if (is_upper)
 		{
 			str[i] = ((str[i] - 'A' + 13) % 26) + 'A';
