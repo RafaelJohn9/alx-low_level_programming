@@ -8,20 +8,18 @@ char *rot13(char *str)
 {
 	char *result = str;
 	int i, j;
+	char is_upper;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < 13; j++)
+		is_upper = (str[i] >= 'A' && str[i] <+ 'Z');
+		if (is_upper)
 		{
-			if ((str[i] >= 'a' && str[i] < 'n') || (str[i] >= 'A' && str[i] < 'N'))
-			{
-				result[i]++;
-			}
-			else if ((str[i] >= 'n' && str[i] <= 'z') ||
-					(str[i] >= 'N' && str[i] <= 'Z'))
-			{
-				result[i]--;
-			}
+			str[i] = ((str[i] - 'A' + 13) % 26) + 'A';
+		}
+		else
+		{
+			str[i] = ((str[i] - 'A' + 13) % 26) + 'a';
 		}
 	}
 	return (result);
