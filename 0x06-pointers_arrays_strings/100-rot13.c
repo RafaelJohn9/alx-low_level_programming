@@ -17,9 +17,9 @@ char *rot13(char *str)
 		{
 			str[i] = ((str[i] - 'A' + 13) % 26) + 'A';
 		}
-		else
+		else if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] = ((str[i] - 'A' + 13) % 26) + 'a';
+			str[i] = ((str[i] - 'a' + 13) % 26) + 'a';
 		}
 	}
 	return (result);
