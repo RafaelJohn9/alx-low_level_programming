@@ -27,7 +27,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	if (n > len)
 	{
-		n = len - 1;
+		n = len;
 	}
 	sum_length = (len_2 + (n + 1));
 	for (i = (len_2); i < sum_length - 1; i++)
