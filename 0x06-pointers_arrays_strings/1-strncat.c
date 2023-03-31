@@ -29,8 +29,8 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		n = len - 1;
 	}
-	sum_length = (len + (n));
-	for (i = (len_2 - 1); i < sum_length; i++)
+	sum_length = (len_2 + (n));
+	for (i = (len_2); i < sum_length; i++)
 	{
 		dest[i] = src[a];
 		a++;
