@@ -1,4 +1,4 @@
-
+#include "main.h"
 /**
  * leet-checks and replaces a,e,o,t,l
  * @str:value to be checked
@@ -6,27 +6,21 @@
  */
 char *leet(char *str)
 {
-	int len = 0;
-	int a;
-	
-	while (str[len] != '\0')
+	char *result = str;
+	char *letters = "aAeEoOTtlL";
+	char *replacements = "44330711";
+	int i, j;
+
+	for (i = 0; i != '\0'; i++)
 	{
-		len++;
-	}
-	for (a = 0; a < len; a++)
-	{
-		int is_uppercase = (str[a] >= 'A' && str[a] <= 'Z');
-		str[a] = (str[a] | 32); // convert to lowercase
-		int is_vowel_or_l = (str[a] == 'a' || str[a] == 'e'
-				|| str[a] == 'o' || str[a] == 'u' || str[a] == 'l');
-		if (is_vowel_or_l)
+		for (j = 0; j < 10; j++)
 		{
-			str[a] = (is_uppercase ? '4' : '5');
-		}
-		else if (str[a] == 't') 
-		{
-			str[a] = (is_uppercase ? '7' : '7');
+			if (str[i] == letters[j])
+			{
+				str[i] = replacements[j];
+				break;
+			}
 		}
 	}
-	return (str);
+	return (result);
 }
