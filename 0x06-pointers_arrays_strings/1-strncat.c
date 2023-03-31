@@ -27,10 +27,10 @@ char *_strncat(char *dest, char *src, int n)
 
 	if (n > len)
 	{
-		n = len;
+		n = len - 1;
 	}
-	sum_length = (len + (n - 1));
-	for (i = (len_2 + 1); i < sum_length; i++)
+	sum_length = (len + (n));
+	for (i = (len_2); i < sum_length; i++)
 	{
 		dest[i] = src[a];
 		a++;
