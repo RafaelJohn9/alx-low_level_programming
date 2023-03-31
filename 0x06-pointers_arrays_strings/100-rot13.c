@@ -6,21 +6,21 @@
  */
 char *rot13(char *str)
 {
+       	int i, j;
 	char *result = str;
-	int i;
-	char is_upper;
+	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		is_upper = (str[i] >= 'A' && str[i] <= 'Z');
-		if (is_upper)
+		for (j = 0; j < 52; j++)
 		{
-			str[i] = ((str[i] - 'A' + 13) % 26) + 'A';
-		}
-		else if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = ((str[i] - 'a' + 13) % 26) + 'a';
+			if (str[i] == alpha[j])
+			{
+				str[i] = rot13[j];
+				break;
+			}
 		}
 	}
-	return (result);
+	return result;
 }
