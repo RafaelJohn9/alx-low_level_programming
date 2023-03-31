@@ -15,6 +15,10 @@ char *cap_string(char *str)
 	{
 		len++;
 	}
+	if (str[0] >= 'a' && str[0] <= 'z')
+	{
+		str[0] = str[0] - 32;
+	}
 	for (a = 0; a < len; a++)
 	{
 		if (str[a] == '\n' || str[a] == '!' ||
