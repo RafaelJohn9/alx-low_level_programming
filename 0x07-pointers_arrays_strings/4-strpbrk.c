@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * strpbrk-writes a function that searches a string for any of a set of bytes
+ * _strpbrk-writes a function that searches a string for any of a set of bytes
  * @s:where to be searched
  * @accept:character to be searched
  * Return:char type
