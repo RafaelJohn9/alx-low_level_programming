@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 	{
 		while (s[a] != '\0')
 		{
-			a++
+			a++;
 		}
 		return (s + a); 
 	}
