@@ -19,11 +19,11 @@ void print_diagsums(int *a, int size)
 		{
 			if (row == column)
 			{
-				sum_1 += (row * size + column);
+				sum_1 += *(a + row * size + column);
 			}
 			else if (row + column == size - 1)
 			{
-				sum_2 += (row * size + column);
+				sum_2 += *(a + row * size + column);
 			}
 		}
 	}
