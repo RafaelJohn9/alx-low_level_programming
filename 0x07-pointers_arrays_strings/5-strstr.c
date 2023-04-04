@@ -24,7 +24,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		len++;
 	}
-	if ( b == (len -1))
+	if (b == (len - 1))
 	{
 		return (needle);
 	}
