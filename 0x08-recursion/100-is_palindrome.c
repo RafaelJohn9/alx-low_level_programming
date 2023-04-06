@@ -17,8 +17,7 @@ int is_palindrome(char *s)
 	}
 	else
 	{
-		return (1 + is_palindrome(s + 1));
-		len = is_palindrome(s + 1);
+		len = 1 + is_palindrome(s + 1);
 	}
 	mid = len / 2 - 1;
 	if (s[i++] == mid)
