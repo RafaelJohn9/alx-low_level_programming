@@ -9,14 +9,16 @@ int is_palindrome(char *s)
 {
 	int len = 1 + is_palindrome(s + 1);
 	int i = 0;
+	int mid = len / 2 - 1;
 
-	if (s[i++] == (len / 2) - 1)
+	if (s[i++] == mid)
 	{
 		return (1);
 	}
-	else if (s[i++] == s[len--])
+	else if (s[i++] == s[len])
 	{
-		return (is_palindrome(--s));
+		int result = is_palindrome(s + 1);
+		return (result);
 	}
 	else
 	{
