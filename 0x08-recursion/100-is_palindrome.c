@@ -20,13 +20,14 @@ int is_palindrome(char *s)
 		len = 1 + is_palindrome(s + 1);
 	}
 	mid = len / 2 - 1;
-	if (s[i++] == (mid--))
+	if (s[i++] == s[mid])
 	{
 		return (1);
 	}
 	else if (s[i++] == s[len])
 	{
 		int result = is_palindrome(s + 1);
+
 		return (result);
 	}
 	else
