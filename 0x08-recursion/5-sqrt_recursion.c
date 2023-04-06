@@ -21,14 +21,14 @@ int _sqrt_recursion(int n)
 	}
 	else if (n % 49 == 0)
 	{
-		return(7 * _sqrt_recursion(n / 49));
+		return (7 * _sqrt_recursion(n / 49));
 	}
 	else if (n == 1)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
-		return(-1);
+		return (-1);
 	}
 }
