@@ -40,5 +40,4 @@ int is_palindrome(char *s)
 	{
 		return (0);
 	}
-	_putchar(s[mid]);
 }
