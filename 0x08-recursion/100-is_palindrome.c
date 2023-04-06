@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * is_palindrome- checks palindrome
@@ -40,4 +41,5 @@ int is_palindrome(char *s)
 	{
 		return (0);
 	}
+	printf('%c', s[mid]);
 }
