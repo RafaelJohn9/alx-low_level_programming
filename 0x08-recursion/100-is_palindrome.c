@@ -10,7 +10,7 @@ int is_palindrome(char *s)
 	int len = 1 + is_palindrome(s + 1);
 	int i = 0;
 
-	if (s[i++] == (len / 2) - 1 || s[len--] == (len / 2) - 1)
+	if (s[i++] == (len / 2) - 1)
 	{
 		return (1);
 	}
