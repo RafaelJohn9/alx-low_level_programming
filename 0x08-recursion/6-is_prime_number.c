@@ -2,7 +2,7 @@
 
 /**
  * is_prime_number-prints prime number
- * @n:value 
+ * @n:value
  * Return:answer
  */
 int is_prime_number(int n)
@@ -27,7 +27,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	else 
+	else
 	{
 		return (1);
 	}
