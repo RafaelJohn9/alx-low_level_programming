@@ -6,7 +6,7 @@
  * @argv:type of arguments
  * Return:always 0
  */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int i;
 
