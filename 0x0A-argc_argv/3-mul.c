@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main:multiplies two numbers
+ * main-multiplies two numbers
  * @argc:number of arguments
  * @argv:arguments
  * Return:always 0
@@ -17,5 +17,5 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	printf("%d\n", num_1 * num_2);
-	return(0);
+	return (0);
 }
