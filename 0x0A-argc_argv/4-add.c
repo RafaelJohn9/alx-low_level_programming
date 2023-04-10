@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		num = atoi(argv[i]);
 		if (num < 0)
 		{
-			return(0);
+			return (0);
 		}
 		sum = sum + num;
 	}
