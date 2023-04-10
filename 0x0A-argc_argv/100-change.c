@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main-program that prints the min num pf coins to mak chang for an amt of money
+ * main-prints the min num of coins to make change for an amt of money
  * @argc:num of arg
- * @argv:arg 
+ * @argv:arg
  * Return:always 0
  */
 int main(int argc, char **argv)
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	num = atoi(argv[i]);
-	for(i = 1; num > 0; i++)
+	for (i = 1; num > 0; i++)
 	{
 		if (num >= 25)
 		{
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			num = num - 10;
 		}
 		else if (num >= 5)
-		{ 
+		{
 			change++;
 			num = num - 5;
 		}
