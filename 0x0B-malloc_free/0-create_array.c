@@ -20,6 +20,5 @@ char *create_array(unsigned int size, char c)
 	{
 		mem[i] = c;
 	}
-	mem[i] = c;
 	return (mem);
 }
