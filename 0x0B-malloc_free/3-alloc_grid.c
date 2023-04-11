@@ -29,7 +29,6 @@ int **alloc_grid(int width, int height)
 			for (j = 0; j < i; j++)
 			{
 				free(mem[j]);
-				return(NULL);
 			}
 			free(mem);
 			return (NULL);
@@ -39,6 +38,5 @@ int **alloc_grid(int width, int height)
 			mem[i][j] = 0;
 		}
 	}
-	free(mem);
 	return (mem);
 }
