@@ -16,7 +16,7 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	mem = malloc(sizeof(int*) * height + 1);
+	mem = malloc(sizeof(int*) * height);
 	if (mem == NULL)
 	{
 		return (NULL);
@@ -28,6 +28,5 @@ int **alloc_grid(int width, int height)
 			mem[i][j] = 0;
 		}
 	}
-	free(mem);
 	return (mem);
 }
