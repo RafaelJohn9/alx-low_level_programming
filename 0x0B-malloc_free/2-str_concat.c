@@ -9,10 +9,20 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *mem = malloc((sizeof(char) * sizeof(s1)) + (sizeof(char) * sizeof(s2)) + 1);
+	char *mem;
 	int i;
+	int len_1, len_2;
 	int a;
 
+	while (s1[len_1] != '\0')
+	{
+		len_1++;
+	}
+	while (s2[len_2] != '\0')
+	{
+		len_2++;
+	} 
+	mem = malloc((sizeof(char) * len_1) + (sizeof(char) * len_2) - 1);
 	if (mem == NULL)
 	{
 		return(NULL);
