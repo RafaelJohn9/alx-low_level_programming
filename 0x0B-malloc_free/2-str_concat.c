@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *mem;
 	int i;
-	int len_1, len_2;
+	int len_1 = 0, len_2 = 0;
 	int a;
 
 	while (s1[len_1] != '\0')
