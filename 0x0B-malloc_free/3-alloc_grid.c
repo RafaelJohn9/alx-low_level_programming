@@ -8,7 +8,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **mem = malloc(sizeof(width * height));
+	int **mem ;:wq
 	int i, j;
 
 	for (i = 0; i < height; i++)
