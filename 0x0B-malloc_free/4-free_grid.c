@@ -12,11 +12,7 @@ void free_grid(int **grid, int height)
 
 	for (i = 0; i <  height; i++)
 	{
-		for ( j = 0; j < grid; j++)
-		{
-			free(alloc_grid[j]);
-		}
-			free(alloc_grid[i]);
+			free(grid[i]);
 	}
-	return(0);
+	free(grid);
 }
