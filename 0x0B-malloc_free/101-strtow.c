@@ -31,10 +31,10 @@ char **strtow(char *str)
 	for (i = 0; i < num; i++)
 	{
 		len = 0;
-		k = 0;
 		j = 0;
 		if (str[l] != ' ')
 		{
+			k = l;
 			while (str[k] != ' ')
 			{
 				len++;
