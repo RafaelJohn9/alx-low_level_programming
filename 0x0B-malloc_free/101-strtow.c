@@ -51,6 +51,7 @@ char **strtow(char *str)
 		else
 		{
 			l++;
+			i -= i;
 		}
 	}
 	mem[i] = NULL;
