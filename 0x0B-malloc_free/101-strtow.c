@@ -47,7 +47,6 @@ char **strtow(char *str)
 				l++;
 				j++;
 			}
-			mem[i][j] = '\0';
 		}
 		else
 		{
