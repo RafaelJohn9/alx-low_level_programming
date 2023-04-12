@@ -31,36 +31,29 @@ char **strtow(char *str)
 	for (i = 0; i < num; i++)
 	{
 		len = 0;
-		j = 0;
-		if (str[l] != ' ')
-		{
-			k = l;
-			while (str[k] != ' ')
-			{
-				len++;
-				k++;
-			}
-			mem[i] = malloc(sizeof(char) * len + 1);
-			if(mem[i] == NULL)
-			{
-				for (j = 0; j < i; j++)
-				{
-					free(mem[j]);
-				}
-				free(mem);
-				return (NULL);
-			}
-			while (str[l] != ' ')
-			{
-				mem[i][j] = str[l];
-				l++;
-				j++;
-			}
-		}
-		else
+		while (str[l] == ' ')
 		{
 			l++;
-			i -= i;
+		}
+		k = l;
+		while (str[k] != ' ')
+		{
+			len++;
+			k++;
+		}
+		mem[i] = malloc(sizeof(char) * len + 1);
+		if(mem[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				free(mem[j]);
+			}
+			free(mem);
+			return (NULL);
+		}
+		for (j = 0; j < len; j++)
+		{
+			mem[i][j] = '\0';
 		}
 	}
 	mem[i] = NULL;
