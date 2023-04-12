@@ -40,7 +40,16 @@ char **strtow(char *str)
 				len++;
 				k++;
 			}
-			mem[i] = malloc(sizeof(char) * len);
+			mem[i] = malloc(sizeof(char) * len + 1);
+			if(mem[i] == NULL)
+			{
+				for (j = 0; j < i; j++)
+				{
+					free(mem[j]);
+				}
+				free(mem);
+				return (NULL);
+			}
 			while (str[l] != ' ')
 			{
 				mem[i][j] = str[l];
