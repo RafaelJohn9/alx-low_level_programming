@@ -32,15 +32,15 @@ char **strtow(char *str)
 	{
 		len = 0;
 		k = 0;
-		while (str[k] != ' ')
-		{
-			len++;
-			k++;
-		}
-		mem[i] = malloc(sizeof(char) * len);
 		j = 0;
 		if (str[l] != ' ')
 		{
+			while (str[k] != ' ')
+			{
+				len++;
+				k++;
+			}
+			mem[i] = malloc(sizeof(char) * len);
 			while (str[l] != ' ')
 			{
 				mem[i][j] = str[l];
