@@ -55,6 +55,7 @@ char **strtow(char *str)
 		for (j = 0; j < len; j++)
 		{
 			mem[i][j] = str[k];
+			k++;
 		}
 		mem[i][j] = '\0';
 	}
