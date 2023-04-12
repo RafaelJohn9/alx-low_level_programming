@@ -51,7 +51,7 @@ char **strtow(char *str)
 			free(mem);
 			return (NULL);
 		}
-		k = l
+		k = l;
 		for (j = 0; j < len; j++)
 		{
 			mem[i][j] = str[k];
