@@ -12,7 +12,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mem;
 	unsigned int len_1 = 0, len_2 = 0;
-	unsigned int sum, i, j;
+	unsigned int i, j;
+	unsigned int sum = 0;
 
 	while (s1[len_1] != '\0')
 	{
@@ -30,7 +31,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	sum = len_1 + len_2;
+	if ((int)len_2 >  0)
+	{
+		sum = len_1 + len_2;
+	}
 	mem = malloc(sizeof(char) * sum);
 	if (mem == NULL)
 	{
