@@ -11,7 +11,7 @@
 int *array_range(int min, int max)
 {
 	int *mem;
-	int net ,i;
+	int net, i;
 	int j = 0;
 
 	if (min > max)
@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for ( i = min; i <= max; i++, j++)
+	for (i = min; i <= max; i++, j++)
 	{
 		mem[j] = i;
 	}
