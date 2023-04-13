@@ -14,12 +14,13 @@ int *array_range(int min, int max)
 	int net, i;
 	int j = 0;
 
-	if (min > max)
+	if (min >= max || min < 0 || max < 0)
 	{
 		return (NULL);
 	}
 	net = max - min;
 	mem = malloc((sizeof(int) * net) + 1);
+	memset(mem, 0, (sizeof(int) * net) + 1);
 	if (mem == NULL)
 	{
 		return (NULL);
