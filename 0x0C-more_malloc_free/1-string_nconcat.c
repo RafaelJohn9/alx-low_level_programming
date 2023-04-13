@@ -11,11 +11,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mem;
-	unsigned int len_1 = 0;
-	unsigned int len_2 = 0;
-	unsigned int sum = 0;
-	unsigned int i;
-	unsigned int j;
+	unsigned int len_1 = 0, len_2 = 0;
+	unsigned int sum, i, j;
 
 	while (s1[len_1] != '\0')
 	{
@@ -25,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		len_2++;
 	}
-	if ( n >= len_2)
+	if (n >= len_2)
 	{
 		n = len_2;
 	}
