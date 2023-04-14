@@ -39,7 +39,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		}
 		strncpy(mem, ptr, new_size);
 		free(ptr);
-		return (ptr);
+		return (mem);
 	}
 	if (old_size >  new_size)
 	{
@@ -49,8 +49,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (NULL);
 		}
 		strncpy(mem, ptr, new_size);
-		return (ptr);
 		free(ptr);
+		return (mem);
 	}
 	return (ptr);
 }
