@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * string_nconcat-concatenates two str
@@ -13,14 +14,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *mem;
 	unsigned int i, j, len_1 = 0, len_2 = 0, sum = 0;
 
-	while (s1[len_1] != '\0')
-	{
-		len_1++;
-	}
-	while (s2[len_2] != '\0')
-	{
-		len_2++;
-	}
+	len_1 = strlen(s1) + 1;
+	len_2 = strlen(s2) + 1;
 	if (n >= len_2)
 	{
 		n = len_2;
