@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	if (s1[1] != '\0')
+	if (s1 != "")
 	{
 		for (i = 0; i < len_1; i++)
 		{
@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			mem[i] = s1[i];
 		}
 	}
-	if (s2[1] != '\0')
+	if (s2 != "")
 	{
 		for (j = 0; j < n; j++, i++)
 		{
