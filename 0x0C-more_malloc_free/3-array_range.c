@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * array_range- write a functon that creates an array of integers
@@ -23,6 +24,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
+	memset(mem, 0, (4 * net) + 1);
 	for (i = min; i <= max; i++, j++)
 	{
 		mem[j] = i;
