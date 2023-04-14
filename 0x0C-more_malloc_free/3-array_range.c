@@ -19,12 +19,12 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	net = max - min;
-	mem = malloc((sizeof(int) * net) + 2);
+	mem = malloc((sizeof(int) * net) + 1);
 	if (mem == NULL)
 	{
 		return (NULL);
 	}
-	memset(mem, 0, (4 * net) + 1);
+	memset(mem, 0, (4 * net));
 	for (i = min; i <= max; i++, j++)
 	{
 		mem[j] = i;
