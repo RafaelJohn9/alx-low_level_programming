@@ -14,8 +14,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *mem;
 	unsigned int i, j, len_1 = 0, len_2 = 0, sum = 0;
 
-	len_1 = strlen(s1) + 1;
-	len_2 = strlen(s2) + 1;
+	len_1 = strlen(s1);
+	len_2 = strlen(s2);
 	if (n >= len_2)
 	{
 		n = len_2;
