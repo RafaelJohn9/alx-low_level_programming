@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	net = max - min + 1;
-	mem = malloc(sizeof(int) * net);
+	mem = malloc(sizeof(int) * net + 1);
 	if (mem == NULL)
 	{
 		return (NULL);
