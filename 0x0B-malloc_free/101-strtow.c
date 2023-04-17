@@ -51,11 +51,9 @@ char **strtow(char *str)
 			free(mem);
 			return (NULL);
 		}
-		k = l;
 		for (j = 0; j < len; j++)
 		{
-			mem[i][j] = str[k];
-			k++;
+			mem[i][j] = str[l + j];
 		}
 		mem[i][j] = '\0';
 	}
