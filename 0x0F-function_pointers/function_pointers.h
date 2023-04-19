@@ -1,6 +1,6 @@
+#ifndef FUNCTION_PTRS_H
+#define FUNCION_PTRS_H
 #include <stdlib.h>
-#ifndef FUNCTION_PTRSi
-#define FUNCION_PTRS
 
 char _putchar(char c);
 void array_iterator(int *array, size_t size, void (*action)(int));
