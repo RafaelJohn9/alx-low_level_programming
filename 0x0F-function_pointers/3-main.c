@@ -25,6 +25,12 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
+	if (argv[2][0] != '+' || argv[2][0] != '-' ||
+				argv[2][0] != '*' || argv[2][0] != '/' || argv[2][0] != '%')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	num_1 = atoi(argv[1]);
 	num_2 = atoi(argv[3]);
 	ans = get_op_func(argv[2])(num_1, num_2);
