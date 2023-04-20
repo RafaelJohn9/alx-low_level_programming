@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 /**
- * print_strings:prints str
+ * print_strings-prints str
  * @separator:separator
  * @n:value
  */
