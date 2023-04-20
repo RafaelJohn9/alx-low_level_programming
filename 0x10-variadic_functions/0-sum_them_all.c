@@ -3,7 +3,6 @@
 /**
  * sum_them_all-returns the sum of all its parameter
  * @n:constant count
- *
  * Return:always 0
  */
 int sum_them_all(const unsigned int n, ...)
@@ -16,7 +15,7 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		return (0);
 	}
-	va_start (arg, n);
+	va_start(arg, n);
 	for (i = 0; i < (int)n; i++)
 	{
 		x = va_arg(arg, int);
