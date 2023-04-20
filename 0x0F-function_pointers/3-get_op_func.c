@@ -4,7 +4,7 @@
 /**
  * get_op_func-returns ptr to correct func
  * @s:str to be checked
- * Return : ans int
+ * Return: ans int
  */
 int (*get_op_func(char *s))(int, int)
 {
