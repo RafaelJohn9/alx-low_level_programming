@@ -5,8 +5,7 @@
 
 /**
  * print_all-prints any
- * @separator:separator
- * @n:value
+ * @format:format
  */
 void print_all(const char * const format, ...)
 {
