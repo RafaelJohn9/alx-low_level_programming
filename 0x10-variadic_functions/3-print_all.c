@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 		}
 		else
 		{
-			printf("%s", (char *)x);
+			printf("%p", x);
 		}
 		i++;
 	}
