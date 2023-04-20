@@ -1,0 +1,28 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
+
+/**
+ * main- test case
+ * @argc: no of ar
+ * @argv:arg
+ * Return:always 0
+ */
+int main(int argc, char **argv)
+{
+	int num_2;
+	int num_1;
+	int ans = 0;
+
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(99);
+	}	
+	num_1 = atoi(argv[1]);
+	num_2 = atoi(argv[3]);
+	ans = get_op_func(argv[2])(num_1, num_2);
+	printf("%d\n", ans);
+	return(0);
+}			

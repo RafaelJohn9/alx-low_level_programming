@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 
 /**
  * get_op_func-returns ptr to correct func
@@ -18,6 +19,13 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (ops[i].op != NULL)
 	{
-		if (op_t:w
+		if (strcmp(s, ops[i].op) == 0)
+		{
+			return (ops[i].f);
+		}
+		i++;
+	}
+	return (NULL);
+}
