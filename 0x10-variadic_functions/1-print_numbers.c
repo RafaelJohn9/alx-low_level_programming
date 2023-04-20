@@ -1,6 +1,7 @@
 #include <stdarg.h>
-#include  "variadic_functions.h"
+#include "variadic_functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_numbers-a function that prints numbers, followed by a line
@@ -12,7 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list arg;
 	int i, x;
 
-	if (n == 0)
+	if (separator == NULL)
 	{
 		return;
 	}
