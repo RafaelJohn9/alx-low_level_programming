@@ -10,23 +10,38 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	void *x;
 	va_list arg;
-
+	
 	va_start(arg, format);
-	while (i < 10)
+	while (format && format[i])
 	{
-		x = va_arg(arg, void *);
-		if (x == NULL)
+		if (format[i] == 'c')
 		{
-			printf("nil");
+			printf("%c", va_arg(arg, int));
+		}
+		else if (format[i] == 'i')
+		{
+			printf("%d", va_arg(arg, int));
+		}
+		else if (format[i] == 'f')
+		{
+			printf("%f", (float)va_arg(arg, double));
+		}
+		else if (format[i] == 's')
+		{
+			printf("%s", va_arg(arg, char *));
 		}
 		else
 		{
-			printf("%p", x);
+			i++;
+			continue;
+		}
+		if (format[i + 1])
+		{
+			printf(", ");
 		}
 		i++;
 	}
+	printf("\n");
 	va_end(arg);
-	putchar('\n');
 }
