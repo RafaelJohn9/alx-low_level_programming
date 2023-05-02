@@ -37,6 +37,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	node->next = ptr;
 	node->next = ptr->next;
-	free (ptr);
 	return (1);
 }
