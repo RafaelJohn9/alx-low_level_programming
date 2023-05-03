@@ -25,11 +25,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	new_num->n = n;
-	new_num->next = NULL;
 	current = *head;
 	if (idx == 0)
 	{
 		new_num->next = *head;
+		current = new_num;
 		*head = current;
 		return (*head);
 	}
