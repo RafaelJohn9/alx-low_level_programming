@@ -6,7 +6,7 @@
  * @c:char c
  * Return:char
  */
-char _putchar(char *c)
+char _putchar(char c)
 {
 	return(write(1, &c, 1));
 }
