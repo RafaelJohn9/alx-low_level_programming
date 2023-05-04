@@ -3,9 +3,17 @@
 
 int main(void)
 {
-	const char *binary_str = "1100010";
-	unsigned int decimal_val = binary_to_uint(binary_str);
-	
-	printf("Binary string %s is equal to %u in decimal\n", binary_str, decimal_val);
-	return 0;
+	unsigned int n;
+
+	n = binary_to_uint("1");
+	printf("%u\n", n);
+	n = binary_to_uint("101");
+	printf("%u\n", n);
+	n = binary_to_uint("1e01");
+	printf("%u\n", n);
+	n = binary_to_uint("1100010");
+	printf("%u\n", n);
+	n = binary_to_uint("0000000000000000000110010010");
+	printf("%u\n", n);
+	return (0);
 }

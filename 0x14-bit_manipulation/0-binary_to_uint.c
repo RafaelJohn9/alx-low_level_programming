@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * binary_to_unint-a function that converts a binary number to an unsigned int
+ * binary_to_uint-a function that converts a binary number to an unsigned int
  * @b:value
  * Return:0 or number(if everything goes as expected
  */
@@ -12,9 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	int j = 0, len = 0, i, num;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
 	while (b[len] != '\0')
 	{
 		len++;
@@ -46,9 +44,7 @@ unsigned int binary_to_uint(const char *b)
 			}
 		}
 		else
-		{
 			return (0);
-		}
 	}
 	return (sum);
 }
