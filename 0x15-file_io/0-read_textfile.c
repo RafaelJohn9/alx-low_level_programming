@@ -26,6 +26,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	len = fread(buffer, sizeof(char), letters, document);
+	if (len < 0)
+	{
+		return (0);
+	}
 	if ((int)letters > len)
 	{
 		letters = len;
