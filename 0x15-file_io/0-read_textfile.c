@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *document;
 	ssize_t len;
-	char *buffer = malloc(sizeof(char) * letters);
+	char *buffer;
 
 	if (!filename)
 	{
@@ -23,6 +23,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	document = fopen(filename, "r");
 	if (!document)
 	{
+		return (0);
+	}
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
+	{
+		fclose(document);
 		return (0);
 	}
 	len = fread(buffer, sizeof(char), letters, document);
