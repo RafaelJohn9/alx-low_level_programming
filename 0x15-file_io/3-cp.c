@@ -40,11 +40,15 @@ int main(int argc, char **argv)
 	{
 		bytes_read = read(fd1, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
+		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		return (98);
+			return (98);
+		}
 		if (write(fd2, buffer, bytes_read) != bytes_read)
+		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		return (99);
+			return (99);
+		}
 		bytes -= bytes_read;
 	}
 	if (close(fd1) == -1)
