@@ -15,6 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *document;
 	ssize_t len;
 	char *buffer;
+	int bytes;
 
 	if (!filename)
 	{
@@ -40,7 +41,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		letters = len;
 	}
-	write(1, buffer, len);
+	bytes = write(1, buffer, len);
+	if (bytes != len)
+	{
+		return (-1);
+	}
 	fclose(document);
 	free(buffer);
 	return ((ssize_t)letters);
