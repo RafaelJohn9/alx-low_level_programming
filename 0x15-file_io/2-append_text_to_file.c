@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * append_text-appends at the end of a line
+ * append_text_to_file-appends at the end of a line
  * @filename:file name
  * @text_content:text content
  * Return:1 if successful -1 if not successful
@@ -24,7 +24,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (!text_content)
 	{
-		return(1);
+		return (1);
 	}
 	write(fd, text_content, strlen(text_content));
 	close(fd);
