@@ -1,6 +1,4 @@
 #include "main.h"
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <string.h>
 
 /**
@@ -11,7 +9,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fd, bytes;
 
 	if (!filename)
 	{
@@ -24,9 +22,15 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (!text_content)
 	{
+		close(fd);
 		return (1);
 	}
-	write(fd, text_content, strlen(text_content));
+	bytes = write(fd, text_content, strlen(text_content));
+	if (bytes != strlen(text_content))
+	{
+		close(fd);
+		return (-1);
+	}
 	close(fd);
 	return (1);
 }
