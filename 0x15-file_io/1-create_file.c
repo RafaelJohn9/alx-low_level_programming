@@ -1,10 +1,7 @@
-#include <stdio.h>
-#include <fcntl.h>
-#include <sys/types.h>
 #include "main.h"
-#include <unistd.h>
 #include <sys/stat.h>
-
+#include <stdio.h>
+#include <sys/types.h>
 /**
  * create_file-a funtion that creates file
  * @filename:name of the file to create and text content
