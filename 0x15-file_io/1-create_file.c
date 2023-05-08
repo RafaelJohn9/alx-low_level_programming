@@ -9,7 +9,7 @@
  * create_file-a funtion that creates file
  * @filename:name of the file to create and text content
  * @text_content:text content
- * Return : 1-successful -1-unsuccessful
+ * Return: 1-successful -1-unsuccessful
  */
 int create_file(const char *filename, char *text_content)
 {
