@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <fcntl.h>
+#include <sys/types.h>
 #include "main.h"
 #include <unistd.h>
-#include <string.h>
 #include <sys/stat.h>
 
 /**
@@ -11,24 +12,30 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *doc;
-	ssize_t  len = strlen(text_content); 
+	int fd, len, bytes;
 
 	if (!filename)
 	{
 		return (-1);
 	}
-	doc = fopen(filename, "w+");
-	chmod(filename, 0600);
-	if (!doc)
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
 	{
 		return (-1);
 	}
-	if (text_content != NULL)
+	if (text_content)
 	{
-		fclose(doc);
-		return (1);
+		len = 0;
+		while (text_content[len] != '\0')
+		{
+			len++;
+		}
+		bytes = write(fd, text_content, len);
+		if (bytes != len)
+		{
+			return (-1);
+		}
 	}
-	fwrite(text_content, sizeof(char), len, doc);
+	close(fd);
 	return (1);
 }
