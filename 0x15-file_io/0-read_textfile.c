@@ -39,7 +39,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	if ((int)letters > len)
 	{
-		letters = len;
+		fprintf(stderr, "Error: Unable to open file %s\n", filename); 
+		return (0);
 	}
 	bytes = write(1, buffer, len);
 	if (bytes != len)
