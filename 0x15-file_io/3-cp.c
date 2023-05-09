@@ -1,6 +1,5 @@
 #include "main.h"
 #define BUFFER_SIZE 1024
-
 /**
  * main - copies the content of a file to another file
  * @argc: number of arguments
