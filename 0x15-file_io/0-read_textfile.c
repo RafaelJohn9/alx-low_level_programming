@@ -39,8 +39,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	if ((int)letters > len)
 	{
-		fprintf(stderr, buffer, len);
-		return (0);
+		letters = len;
 	}
 	bytes = write(1, buffer, len);
 	if (bytes != len)
