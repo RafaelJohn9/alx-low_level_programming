@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *document;
 	ssize_t len;
-	char *buffer[1024];
+	char *buffer;
 	int bytes;
 
 	if (!filename)
