@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index-inserts a new node at a given position.
  * @h:pointer to a pointer to a node struct
@@ -9,33 +8,33 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int count = 0;
-	dlistint_t *new_node, *iterator;
+	dlistint_t *new_node, *current_node;
 
 	if (!*h)
 	{
-		return NULL;
+		return (NULL);
 	}
-	iterator = *h;
+	current_node = *h;
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
 	{
-		return NULL;
+		return (NULL);
 	}
 	new_node->n = n;
 	new_node->prev = NULL;
 	new_node->next = NULL;
-	while (iterator != NULL)
+	while (current_node != NULL)
 	{
 		if (count == idx)
 		{
-			if (iterator-> prev && iterator->next)
+			if (current_node->prev && current_node->next)
 			{
-				(iterator->prev)->next = new_node;
-				new_node->next = iterator;
-				(iterator->next)->prev = new_node;
+				(current_node->prev)->next = new_node;
+				new_node->next = current_node;
+				(current_node->next)->prev = new_node;
 				return (*h);
 			}
-			else if (iterator->prev == NULL)
+			else if (current_node->prev == NULL)
 			{
 				new_node->next = *h;
 				(*h)->prev = new_node;
@@ -43,14 +42,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				return (*h);
 
 			}
-			else if (iterator->next == NULL)
+			else if (current_node->next == NULL)
 			{
-				iterator->next = new_node;
+				current_node->next = new_node;
 				return (*h);
 			}
 		}
-		iterator = iterator->next;
+		current_node = current_node->next;
 		count++;
 	}
-	return NULL;
+	return (NULL);
 }
