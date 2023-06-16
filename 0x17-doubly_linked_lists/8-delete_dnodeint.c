@@ -18,13 +18,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	node = *head;
 	while (node != NULL)
 	{
-		if (count == index && count == 0)
+		if (index == 0)
 		{
 			*head = (*head)->next;
 			free(node);
 			return (1);
 		}
-		if (count == index && count > 0)
+		if (count == index)
 		{
 			if (node->next)
 			{
