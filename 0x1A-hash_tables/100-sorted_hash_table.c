@@ -1,5 +1,10 @@
 #include "hash_tables.h"
 
+/**
+ * shash_table_create- creates shash_table
+ * @size: size of the shashtable
+ * Return: shash_table
+ */
 shash_table_t *shash_table_create(unsigned long int size)
 {
     shash_table_t *ht;
@@ -26,7 +31,13 @@ shash_table_t *shash_table_create(unsigned long int size)
     return ht;
 }
 
-
+/**
+ * shash_table_set-sets  shash node and adds it in shashtable
+ * @ht:shash_table
+ * @key:key
+ * @value: value in key
+ * Return: 1 if success 0 if fail
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
     shash_node_t *new_node, *node;
@@ -94,6 +105,13 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
     return 1;
 }
+
+/**
+ * shash_table_get-gets shashnode from shashtable
+ * @ht:shashtable
+ * @key: key of value
+ * Return:value else none
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
     shash_node_t *node;
@@ -114,6 +132,11 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
     return NULL;
 }
+
+/**
+ * shash_table_print- prints out contents of shashtable
+ * @ht: shashtable
+ */
 void shash_table_print(const shash_table_t *ht)
 {
     shash_node_t *node;
@@ -132,6 +155,11 @@ void shash_table_print(const shash_table_t *ht)
     }
     printf("}\n");
 }
+
+/**
+ * shash_table_print_rev-prints the shashtable in reverse
+ * @ht: the shashtable
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
     shash_node_t *node;
@@ -150,6 +178,11 @@ void shash_table_print_rev(const shash_table_t *ht)
     }
     printf("}\n");
 }
+
+/**
+ * shash_table_delete-deletes a shashtable
+ * @ht:the shashtable
+ */
 void shash_table_delete(shash_table_t *ht)
 {
     shash_node_t *node, *next;
@@ -174,4 +207,3 @@ void shash_table_delete(shash_table_t *ht)
     free(ht->array);
     free(ht);
 }
-
