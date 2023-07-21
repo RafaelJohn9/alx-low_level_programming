@@ -2,7 +2,7 @@
 
 /**
  * print_name-prints out name
- * @name:vallue to be printed
+ * @name:value to be printed
  * @f:function ptr
  */
 void print_name(char *name, void (*f)(char *))
