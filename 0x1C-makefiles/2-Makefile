@@ -1,17 +1,19 @@
 # useful variables
-CC = gcc -c -o
+CC = gcc
 SRC = main.c school.c
 OBJ = main.o school.o
 NAME = school
 
 all: $(NAME)
-
-$(NAME):
-	$(CC) $(OBJ) $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 $(OBJ):
-	$(CC) $(SRC)
+	$(CC) -c -o main.o main.c
+	$(CC) -c -o school.o school.c
+
+$(NAME): $(OBJ)
+
 
 #clean up
 clean:
-	rm -rf $(NAME)
+	rm -f school
