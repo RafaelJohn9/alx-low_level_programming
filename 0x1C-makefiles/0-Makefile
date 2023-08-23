@@ -1,4 +1,6 @@
+# the all rule
 all: school
 
+# dissection
 school: main.c school.c
 	gcc main.c school.c -o school

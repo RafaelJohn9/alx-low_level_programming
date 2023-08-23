@@ -1,0 +1,17 @@
+# useful variables
+CC = gcc -c -o
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+
+all: $(NAME)
+
+$(NAME):
+	$(CC) $(OBJ) $(NAME)
+
+$(OBJ):
+	$(CC) $(SRC)
+
+#clean up
+clean:
+	rm -rf $(NAME)
