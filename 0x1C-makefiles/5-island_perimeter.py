@@ -14,10 +14,12 @@ def island_perimeter(grid):
     perimeter = 0
     row = 0
     column = 0
+    totalItems = numberOfRows * numberOfColumns
+    item = 1
 
-    while (row != numberOfRows) and (column != numberOfColumns):
+    while item < totalItems:
         # check for the end of the row
-        if column == (numberOfColumns - 1):
+        if column == numberOfColumns:
             row += 1
             column = 0
 
@@ -25,19 +27,19 @@ def island_perimeter(grid):
         if grid[row][column] == 1:
             # for the row counting
             if row > 0:
-                if grid[row-1][column] == 1:
+                if grid[row-1][column] == 0:
                     perimeter += 1
             if row < (numberOfRows - 1):
-                if grid[row+1][column] == 1:
+                if grid[row+1][column] == 0:
                     perimeter += 1
             # for the column counting
             if column > 0:
-                if grid[row][column-1] == 1:
+                if grid[row][column-1] == 0:
                     perimeter += 1
             if column < (numberOfColumns - 1):
-                if grid[row][column+1] == 1:
+                if grid[row][column+1] == 0:
                     perimeter += 1
-        row += 1
+        item += 1
         column += 1
 
     return (perimeter)
