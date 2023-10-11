@@ -5,7 +5,7 @@
  * @list: linked list that is to be searched
  * @size: size of the linked list
  * @value: value to be searched for
- * Return: index of the value else -1
+ * Return: ptr of the node that has value else -1
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
