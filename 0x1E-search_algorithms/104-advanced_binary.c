@@ -15,7 +15,7 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t i;
 	int result = -1;
 
-	if (!array || size == 0 || !value)
+	if (!array || size == 0)
 		return (-1);
 
 	mid = left + (right - left) / 2;
@@ -48,5 +48,5 @@ int advanced_binary(int *array, size_t size, int value)
 		result = advanced_binary(array, right, value);
 		return (result);
 	}
-	return (result ? array[result] == value : -1);
+	return (result);
 }
