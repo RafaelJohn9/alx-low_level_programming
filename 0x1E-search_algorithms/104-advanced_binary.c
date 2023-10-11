@@ -42,7 +42,7 @@ int advanced_binary(int *array, size_t size, int value)
 	else
 	{
 		if (array[mid] == value)
-			right = mid;
+			right = mid + 1;
 		else
 			right = mid - 1;
 		result = advanced_binary(array, right, value);
