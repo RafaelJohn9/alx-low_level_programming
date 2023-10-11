@@ -9,38 +9,44 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t sqrtSize = 0, i = 0, indexBeingChecked = 0;
-	listint_t *head, *tail;
+	size_t sqrtSize = 0, indexBeingChecked = 0;
+	listint_t *head = list, *tail = list;
 
 	if (!list || size == 0)
-		return (-1);
-
+		return (NULL);
+	sqrtSize += sqrt(size);
+	indexBeingChecked += sqrtSize;
 	while (tail)
 	{
 		if (tail->index == indexBeingChecked)
 		{
-			printf("Value checked at index at [%d] = [%d]", tail->index, tail->n);
+			printf("Value checked at index at [%lu] = [%d]\n", tail->index, tail->n);
 			if (tail->n == value)
-				return (indexBeingChecked);
+				return (tail);
 			else if (tail->n > value)
 				break;
 			indexBeingChecked += sqrtSize;
 		}
 		if (tail->index == size - 1)
+		{
+			printf("Value checked at index at [%lu] = [%d]\n", tail->index, tail->n);
 			break;
+		}
 		tail =  tail->next;
 	}
 	while (head->index != indexBeingChecked - sqrtSize)
 	{
 		head = head->next;
 	}
-	printf("Value found between indexes [%d] and [%d]", head->index, tail->index);
+	printf("Value found between indexes [%lu] and [%lu]\n",
+			head->index, tail->index);
 
-	while (head->index <= tail->index)
+	while (head && head->index <= tail->index)
 	{
+		printf("Value checked at index [%lu] = [%d]\n", head->index, head->n);
 		if (head->n == value)
-			return (head->index);
+			return (head);
 		head = head->next;
 	}
-	return (-1);
+	return (NULL);
 }
