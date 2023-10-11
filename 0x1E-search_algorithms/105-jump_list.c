@@ -20,7 +20,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		if (tail->index == indexBeingChecked)
 		{
-			printf("Value checked at index at [%lu] = [%d]\n", tail->index, tail->n);
+			printf("Value checked at index [%lu] = [%d]\n", tail->index, tail->n);
 			if (tail->n == value)
 				return (tail);
 			else if (tail->n > value)
@@ -29,7 +29,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		}
 		if (tail->index == size - 1)
 		{
-			printf("Value checked at index at [%lu] = [%d]\n", tail->index, tail->n);
+			printf("Value checked at index [%lu] = [%d]\n", tail->index, tail->n);
 			break;
 		}
 		tail =  tail->next;
